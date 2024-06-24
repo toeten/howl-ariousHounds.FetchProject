@@ -3,27 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Joke App</title>
-  <link rel="stylesheet" href="src/style.css">
+  <title>Random Jokes App</title>
+  <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
-  <main>
+  <header>
     <h1>Random Jokes</h1>
-    <section aria-labelledby="jokes-section">
-      <h2 id="jokes-section">Jokes</h2>
-      <ul id="jokes-list"></ul>
+  </header>
+  <main>
+    <section class="starter-joke">
+      <article>
+        <p id="starter-joke"></p>
+      </article>
     </section>
-    <section aria-labelledby="single-joke-section">
-      <h2 id="single-joke-section">Single Joke</h2>
-      <div id="single-joke"></div>
+    <section>
+      <form id="joke-form" aria-labelledby="joke-form-heading">
+        <h2 id="joke-form-heading">Want a better one?</h2>
+        <fieldset>
+          <legend>Choose your option:</legend>
+          <div>
+            <input type="radio" id="better-one" name="joke-option" value="better" required>
+            <label for="better-one">Eh, give me a better one!</label>
+          </div>
+          <div>
+            <input type="radio" id="ten-jokes" name="joke-option" value="ten">
+            <label for="ten-jokes">Bet you can't give me 10!</label>
+          </div>
+          <div>
+            <input type="radio" id="joke-type" name="joke-option" value="type">
+            <label for="joke-type">Type:</label>
+              <div> 
+                <div>
+                  <input type="radio" id="general" name="joke-type-option" value="general">
+                  <label for="general">General</label>
+                </div>
+                <div>
+                  <input type="radio" id="programming" name="joke-type-option" value="programming">
+                  <label for="programming">Programming</label>
+                </div>
+                <div>
+                  <input type="radio" id="knock-knock" name="joke-type-option" value="knock-knock">
+                  <label for="knock-knock">Knock Knock</label>
+                </div>
+              </div>
+          </div>
+        </fieldset>
+        <button type="submit" id="get-jokes">GO!!</button>
+      </form>
     </section>
-    <form id="joke-form">
-      <h2>Get More Jokes</h2>
-      <label for="joke-type">Type:</label>
-      <input type="text" id="joke-type" name="type">
-      <button type="submit">Fetch Jokes</button>
-    </form>
+    <footer class="footer">By Howl-arious Hounds</footer>
+    <section class="dog-section">
+      <p>Don't like our jokes? Cheer up with a random dog:</p>
+      <img src="" alt="Random Dog" id="dog-pic">
+      <button id="fetch-dog">go fetch</button>
+      <footer class="footer">By Howl-arious Hounds</footer>
+    </section>
   </main>
-  <script src="src/main.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
+
